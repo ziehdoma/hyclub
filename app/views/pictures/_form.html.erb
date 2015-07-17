@@ -1,0 +1,13 @@
+<%= form_for @picture, :html => { :multipart => true } do |form| %>
+  
+  	<div>
+  		<%= form.file_field :image %>
+	</div>
+	<div>
+  		<%= form.hidden_field :gallery_id, value: params[:id]  %>
+	</div>
+
+<div>	
+  <%= form.submit %>
+</div>
+<% end %>

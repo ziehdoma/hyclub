@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hycp</title>
+  <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+	
+	
+	<div class="container">
+		
+		<header>
+			<nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                     <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        </button>
+                        <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+               
+                    </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li> <%= link_to "Home", '/' %></li> 
+                            <li><%= link_to "Gallery", galleries_path %></li>  
+                            <li><%= link_to "Blog", blog_path %></li>                 
+                            <li> <%= link_to "Contact", contact_path %></li>
+                        </ul>
+
+                    <div class="logo">
+                         <img class="img-responsive img-border-left" <img src="<%= asset_path('hyc.jpg') %>"/>
+                     </div> 
+                                
+        	       </div>
+	
+                </div>
+            <!-- /.navbar-collapse -->
+     
+        <!-- /.container -->
+            </nav>
+        </header>
+			
+    </div>   				
+		
+		
+        
+	</div>
+	
+					
+
+<%= yield %>
+    <footer>
+    	<% if current_admin %>
+    	 <%= link_to 'logout', destroy_admin_session_path, method: :delete %>
+    	<% end %>
+    </footer>
+</body>
+
+    <p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+</html>

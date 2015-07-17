@@ -1,0 +1,35 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+
+
+.btn, {
+	margin-left: 180px;
+}
+.comments{
+	margin-left: 180px;
+	color: grey;
+}
+.posttitle{
+	font-size: 30px;
+	color:#cd6839;
+	font-family: cursive
+}
+.whitespace{
+	border-top: 1px black solid;
+}
+ 
+.delete-btttn, .edit-btttn{
+font-size: 20px;
+margin-top: 10px;
+font-family: times;
+margin-left: 10px;
+color: grey;
+
+}
+

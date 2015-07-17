@@ -1,0 +1,16 @@
+<% if admin_signed_in? %>
+
+	<%= form_for @post do |f| %>
+		<p>
+			<%= f.label :title %>
+			<%= f.text_field :title %>
+		</p>
+		<p>
+			<%= f.label :post %>
+			<%= f.text_area :post %>
+		</p>
+		<p>
+			<%= f.submit "Post"%>
+		</p>
+	<% end %>
+<% end %>

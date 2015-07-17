@@ -1,0 +1,32 @@
+// Place all the styles related to the galleries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.gallerytitle  {
+	padding-left: 120px;
+	font-size: 15px;
+	}
+
+.images{
+	display: inline-block;
+	margin-bottom: 5px;
+	padding: 5px;
+
+}
+
+.gallery{
+	margin-left: 120px;
+
+}
+
+.one{
+	color:#cd6839;
+	font-size: 30px;
+	text-align: center;
+	font-family: cursive;
+}
+.eventdelete{
+	margin-left: 120px;
+	color: grey;
+	
+}
+

@@ -1,0 +1,14 @@
+ 
+ <% @galleries.each do |gallery| %>
+
+ 
+  <p><%= gallery.event %></p>
+ 
+
+ 
+ <% end %>
+ <div class="images">
+ <%= image_tag @picture.image.url(:medium) %>
+</div>
+
+

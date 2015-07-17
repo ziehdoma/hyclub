@@ -1,0 +1,53 @@
+
+<div class="container">
+
+        <div class="row">
+            <div class="box">
+                
+                    <% @posts.each do |post| %>
+                    <div class="col-lg-12">
+                       <div class="posttitle"> <%= post.title %>
+                        <% if current_admin %>
+                        
+                          <%= link_to 'Delete', destroy_path(post), method: :delete, data:{ deletable: true}, class: "delete-btttn" %>
+
+                         <%= link_to 'Edit', edit_path(post), class: "edit-btttn" %>
+                   <% end%>
+                  </div> 
+              </div> <br>     
+                        
+                <p><%= post.post %></p>
+					
+                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Comment</button>
+
+<!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+             <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                        <div class="modal-header">
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h4 class="modal-title">Comment</h4>
+                        </div>
+
+                    <div class="modal-body">
+                         <%= render partial: 'comment/new', locals: { post: post, comment: @comment } %>  
+                    </div>
+
+                </div>
+             </div>
+            </div> 
+
+                    <div class="comments">
+                        <%post.comments.count %>            
+                        <% post.comments.each do |comment| %> <br>
+                        <%= comment.name %>  
+                         : <%= comment.body %>
+                        <% end %> 
+                     </div>
+                    <div class="whitespace"></div>
+            <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->

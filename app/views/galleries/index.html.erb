@@ -1,0 +1,9 @@
+<div class="gallerybox">
+<% @galleries.each do |gallery| %>
+	<%= link_to gallery.event, gallery, class: "gallerytitle" %></br>
+	<% if admin_signed_in? %>
+		<%= link_to 'Delete', delete_path(gallery), class: "eventdelete",method: :delete %></br>
+
+	<% end %>
+<% end %>
+</div>
