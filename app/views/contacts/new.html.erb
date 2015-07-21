@@ -1,0 +1,27 @@
+  <body class="contactpage">
+  <h3>Contact Us</h3>
+  <div class="message-form">
+	  <%= simple_form_for @contact do |f| %>
+
+		   <div class="msgname">	
+				<p><%= f.text_field :name, placeholder: :name %></p>
+			</div>
+
+
+			<div class="msgemail">
+				<p><%= f.email_field :email, placeholder: :email %></p>
+			</div>
+
+
+			<div class="msgmsg">	
+				<p><%= f.text_area :message, placeholder: :message %></p>
+			</div>
+
+
+			<div class="btn-btn">
+				<p><%= f.submit "Submit"%></p>
+			</div>
+
+	  <% end %>
+	</div>
+</body>

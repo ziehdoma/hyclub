@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  
+
   devise_for :admins
   root 'pages#home'
   resources :posts, except: [:index, :new, :destroy, :edit] do
@@ -10,17 +12,18 @@ Rails.application.routes.draw do
   # get '/gallery', to: 'pages#gallery'
   get '/blog', to:  'posts#index'
   get '/newpost', to: 'posts#new'
-  get '/contact', to: 'pages#contact'
+  # get '/contact', to: 'contacts#new'
   get '/posts/:id/edit', to: 'posts#edit', as: 'edit'
     
   delete '/posts/:id', to: 'posts#destroy', as: 'destroy', method: :delete
   resources :pictures
   resources :galleries, except: [:delete]
-
   delete '/galleries/:id', to: 'galleries#destroy', as: 'delete', method: :delete
+  # get '/contact', to: 'contacts#new'
  # delete '/pictures/:id', to: 'pictures#destroy', as: 'delete_picture', method: :delete
 
-
+match 'contacts',     to: 'contacts#new',             via: 'get'
+resources "contacts", only: [:new, :create]
   
 
 
