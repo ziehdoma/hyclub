@@ -2,20 +2,41 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
-
-#topics{
-	color:#cd6839;
-
+#homepagebody{
+  background: url(hyclub1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.picture{
-	height:200px;
-	background-image: url('helambhu5.jpg');
-	border: 1px red solid;
+
+#carousel-example{
+        width: 100%;
+        height: 250px;
+    // margin-left: 220px;
+    // background-color: #F08080
+    background: rgba(240,128,128, 0.4);
+}
+
+.carousel-content {
+    display:flex;
+    align-items:center;
+    color: white;
+    font-family: times;
+	font-size: 15px;
+}
+
+#myCarousel{
+	width: 100%;
 	
 }
-.ourteampic{
-	background-color:#50b77c;
 	
+@media all and (max-width: 400px)  {
+
+#carousel-example{
+  width: 100%;
+  height: 400px;
+  background: rgba(240,128,128, 0.4);
+}
+
 }

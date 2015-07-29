@@ -4,30 +4,52 @@
 
 
 
- .contactpage{
-	
-	background-repeat: none;background: url('hyolmo2.jpg') no-repeat center center fixed; 
+ 
+.contactpage{
+	background: url('hyclub8.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
 }
-.message-form{
-	
-	
-	margin-left: 400px;
+.contactbox{
+	background-color: rgba(255,255,255,.5);
+	width: 300px;
+	margin-left: 35%;
+	padding: 5%;
+	margin-top: 5%;
+
 }
 
-.msgname, .msgemail, .msgmsg{
+
+
+
+
+.contactheader{
 	
-	margin-left: 100px;
-}
-.btn{
-	margin-right: 100px;
-}
-h3{
-	margin-left: 500px;
 	color: #cd6839;	
+	font-size: 30px;
+	font-family: cursive;
+	padding: 10px;
 
 }
+.ourteampic{
+	background-color: #d6d5d5;
+}
+
+@media all and (max-width: 400px)  {
+.message-form{
+
+	margin-left: 0px;	
+}
+.contactheader{
+	margin-left: 90px;
+	color: #cd6839;	
+	font-size: 30px;
+	font-family: cursive;
+	padding: 10px;
+
+}
+}
+

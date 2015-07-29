@@ -1,9 +1,14 @@
-  <body class="contactpage">
-  <h3>Contact Us</h3>
-  <div class="message-form">
-	  <%= simple_form_for @contact do |f| %>
+<body class="contactpage">
+	<div class="contactbox">
+  	<div class="contactheader">
+  		Contact Us 
+    </div>
+    
+ 	<div class="form-field">
+  	<div class="message-form">
+	  	<%= simple_form_for @contact do |f| %>
 
-		   <div class="msgname">	
+		   	<div class="msgname">	
 				<p><%= f.text_field :name, placeholder: :name %></p>
 			</div>
 
@@ -24,4 +29,8 @@
 
 	  <% end %>
 	</div>
+	</div>
+</div>
+
+	
 </body>

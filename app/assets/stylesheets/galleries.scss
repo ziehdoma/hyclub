@@ -1,32 +1,54 @@
 // Place all the styles related to the galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.gallerypage{
+	background: url('hyclub10.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+.gallerybox{
+	background-color: rgba(255,255,255,.5);
+	width: 70%;
+	margin-left: 15%;
+	padding: 2%;
+	margin-top: 2%
+}
+.galary_header{
+	border-bottom: 1px solid black;
+	font-size: 30px;
+	color:black;
+	font-family: cursive;
+	margin-bottom: 2%
+}
+
+
+
+.thumbnail {margin-bottom:6px;}
+
+.modal-body img {
+	width: 100%; 	
+  
+}
+
 .gallerytitle  {
-	padding-left: 120px;
-	font-size: 15px;
+	font-family: times;
+	font-size: 18px;
+	color: #a94442;
+	margin-left: 8%
 	}
 
-.images{
-	display: inline-block;
-	margin-bottom: 5px;
-	padding: 5px;
-
-}
-
-.gallery{
-	margin-left: 120px;
-
-}
-
-.one{
+.eventtitle{
 	color:#cd6839;
 	font-size: 30px;
 	text-align: center;
 	font-family: cursive;
 }
-.eventdelete{
-	margin-left: 120px;
-	color: grey;
-	
-}
 
+
+@media all and (max-width: 400px)  {
+
+
+}

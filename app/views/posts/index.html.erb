@@ -1,4 +1,5 @@
-
+<body class="postpage">
+    <div class="postbody">
 <div class="container">
 
         <div class="row">
@@ -17,9 +18,10 @@
               </div> <br>     
                         
                 <p><%= post.post %></p>
-					
-                 <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Comment</button>
 
+				<div class="commentbutton">	
+                    <a href="#" class="test" data-toggle="modal" data-target="#myModal">Comment</a>
+                </div>
 <!-- Modal -->
             <div id="myModal" class="modal fade" role="dialog">
              <div class="modal-dialog modal-sm">
@@ -36,7 +38,6 @@
                 </div>
              </div>
             </div> 
-
                     <div class="comments">
                         <%post.comments.count %>            
                         <% post.comments.each do |comment| %> <br>
@@ -50,4 +51,6 @@
             </div>
         </div>
     </div>
+</div>
+</body>
     <!-- /.container -->

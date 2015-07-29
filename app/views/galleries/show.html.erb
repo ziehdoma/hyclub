@@ -1,20 +1,43 @@
-<div class="one">
-	<%= @gallery.event %>
+<div class="container">
+    <div class="row">
+    	<div class="eventtitle"><%= @gallery.event %>
+    	</div>
+    	<% if admin_signed_in? %>
+			<%= render 'pictures/form' %>
+		<% end %>
+			<br>
+		<% @gallery.pictures.each do |pic| %>
+		<div class="col-lg-3 col-sm-3 col-xs-6"><a href="#">
+			<%= image_tag pic.image.url(:medium), class: "thumbnail img-responsive" %></a>
+		</div>
+				
+			<% if admin_signed_in? %>
+	 			<div class="del">
+				<%= link_to 'Delete', picture_path(pic.id), class: "eventdelete", method: :delete %>
+				</div>
+			<% end %>
+		<%end %>
+  	</div>
 </div>
-	<% if admin_signed_in? %>
-	<%= render 'pictures/form' %>
-	<% end %>
-	<br>
-
-<div class="gallery">
-	<% @gallery.pictures.each do |pic| %>
-<div class="images">
-		<%= image_tag pic.image.url(:medium) %>
+	<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+  	<div class="modal-dialog">
+  	<div class="modal-content">
+	<div class="modal-body">	
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-default" data-dismiss="modal">Close</button>
+	</div>
+   </div>
+  </div>
 </div>
-	<% if admin_signed_in? %>
-		<%= link_to 'Delete', picture_path(pic.id), class: "eventdelete", method: :delete %>
-	<% end %>
-	<% end %>
-</div>
+<script>
+$('.thumbnail').click(function(){
+  	$('.modal-body').empty();
+  	var title = $(this).parent('a').attr("title");
+  	$('.modal-title').html(title);
+  	$($(this).parents('div').html()).appendTo('.modal-body');
+  	$('#myModal').modal({show:true});
+});
+</script>
 
 

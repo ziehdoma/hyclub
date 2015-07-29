@@ -5,12 +5,31 @@
 
 
 
+.postpage{
+	background: url('background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 
+}
 
+.postbody{
+	background-color: rgba(255,255,255,.6);
+	padding: 2%;
+	width: 90%;
+	margin-left: 5%;
+
+}
 
 .btn, {
 	margin-left: 180px;
 }
+a.test {
+    margin-left: 90%;
+    color: #cd6839;
+}
+
 .comments{
 	margin-left: 180px;
 	color: grey;
@@ -22,6 +41,7 @@
 }
 .whitespace{
 	border-top: 1px black solid;
+
 }
  
 .delete-btttn, .edit-btttn{
@@ -30,6 +50,13 @@ margin-top: 10px;
 font-family: times;
 margin-left: 10px;
 color: grey;
+
+}
+@media all and (max-width: 400px)  {
+	p{
+		padding: 8px;
+
+	}
 
 }
 
